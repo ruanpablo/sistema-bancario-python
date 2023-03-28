@@ -55,7 +55,7 @@ while True:
         else:
             print("\n==================== EXTRATO =============================")
             print(f"\n\n\n{extrato} \n")
-            print(f"Saldo atual da conta: {saldo:.2f)
+            print(f"Saldo atual da conta: {saldo:.2f}")
             print("============================================================")
     
     elif opcao == "0":
