@@ -21,7 +21,7 @@ while True:
         deposito = float(input("Digite o valor do deposito desejado: "))
         if deposito > 0:
             saldo += deposito
-            extrato += f"Depósito de {deposito:.2f} R$ \n"
+            extrato += f"Depósito de R$ {deposito:.2f} \n"
             print(f"{deposito:.2f} R$ depositado com sucesso!")
             
         else:
@@ -29,19 +29,19 @@ while True:
             
 
     elif opcao == "2":
-        saque = float(input("Digite o valor de saque desejado (limite máx. 500 R$): "))
+        saque = float(input("Digite o valor de saque desejado (limite máx. R$ 500): "))
         
         if (saque > 0) and (saque <= 500) and (saque <= saldo) and (LIMITE_SAQUES > numero_saques):
             saldo -= saque
-            extrato += f"Saque de {saque:.2f} R$ \n"
-            print(f"{saque:.2f} R$ sacado com sucesso!")
+            extrato += f"Saque de R$ {saque:.2f} \n"
+            print(f"R$ {saque:.2f} sacado com sucesso!")
             numero_saques += 1
 
         elif saque > saldo:
             print("saldo insuficiente para saque...")  
         
         elif saque > 500:
-            print("Saque maior que 500 R$, que é o limite máximo de saque por transação")
+            print("Saque maior que R$ 500 , que é o limite máximo de saque por transação")
         
         elif LIMITE_SAQUES == numero_saques:
             print("Limite de saques diário atingido...")
@@ -55,7 +55,7 @@ while True:
         else:
             print("\n===================== EXTRATO =============================\n")
             print(f"{extrato}")
-            print(f"Saldo atual da conta: {saldo:.2f}")
+            print(f"Saldo atual da conta: R$ {saldo:.2f}")
             print("============================================================")
     
     elif opcao == "0":
