@@ -1,2 +1,2 @@
-idade = parseInt(prompt("Informe sua idade? "));
-alert("Sua idade é: " + idade);
+console.log("Vamo-nos hermanito!");
+alert("Ok");
